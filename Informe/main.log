@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  25 NOV 2018 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  26 NOV 2018 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,897 +632,104 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
-
-Overfull \hbox (3.77371pt too wide) in paragraph at lines 52--53
-[]\OT1/cmr/m/n/12 Para las vi-su-al-iza-ciones, se uti-lizaron las li-brer^^S^^
-Pas Mat-PlotLib y Seaborn,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-[2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-<graficos/output_12_1.png, id=96, 1440.38126pt x 628.3475pt>
-File: graficos/output_12_1.png Graphic file (type png)
-
-<use graficos/output_12_1.png>
-Package pdftex.def Info: graficos/output_12_1.png used on input line 114.
-(pdftex.def)             Requested size: 429.00238pt x 187.14423pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 114--116
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-<graficos/table_1.png, id=98, 912.40875pt x 685.56125pt>
-File: graficos/table_1.png Graphic file (type png)
-
-<use graficos/table_1.png>
-Package pdftex.def Info: graficos/table_1.png used on input line 127.
-(pdftex.def)             Requested size: 429.00238pt x 322.33936pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 127--129
- [] 
- []
-
-[5 <./graficos/output_12_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
-
- []
-
-<graficos/output_16_0.png, id=104, 1093.08376pt x 388.45125pt>
-File: graficos/output_16_0.png Graphic file (type png)
-
-<use graficos/output_16_0.png>
-Package pdftex.def Info: graficos/output_16_0.png used on input line 135.
-(pdftex.def)             Requested size: 429.00238pt x 152.45558pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 135--137
- [] 
- []
-
-[6 <./graficos/table_1.png> <./graficos/output_16_0.png>]
-<graficos/output_18_0.png, id=111, 525.965pt x 388.45125pt>
-File: graficos/output_18_0.png Graphic file (type png)
-
-<use graficos/output_18_0.png>
-Package pdftex.def Info: graficos/output_18_0.png used on input line 142.
-(pdftex.def)             Requested size: 429.00238pt x 316.85464pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 142--144
- [] 
- []
-
-<graficos/output_21_1.png, id=112, 1439.3775pt x 627.34375pt>
-File: graficos/output_21_1.png Graphic file (type png)
-
-<use graficos/output_21_1.png>
-Package pdftex.def Info: graficos/output_21_1.png used on input line 151.
-(pdftex.def)             Requested size: 429.00238pt x 186.9793pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 151--153
- [] 
- []
-
-[7 <./graficos/output_18_0.png>] [8 <./graficos/output_21_1.png>]
-<graficos/output_24_1.png, id=124, 628.3475pt x 560.0925pt>
-File: graficos/output_24_1.png Graphic file (type png)
-
-<use graficos/output_24_1.png>
-Package pdftex.def Info: graficos/output_24_1.png used on input line 163.
-(pdftex.def)             Requested size: 429.00238pt x 382.3962pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 163--165
- [] 
- []
-
-[9 <./graficos/output_24_1.png>]
-<graficos/output_27_1.png, id=130, 1449.415pt x 627.34375pt>
-File: graficos/output_27_1.png Graphic file (type png)
-
-<use graficos/output_27_1.png>
-Package pdftex.def Info: graficos/output_27_1.png used on input line 175.
-(pdftex.def)             Requested size: 429.00238pt x 185.67743pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 175--177
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
-
- []
-
-[10 <./graficos/output_27_1.png>]
-<graficos/output_31_1.png, id=136, 1420.30624pt x 627.34375pt>
-File: graficos/output_31_1.png Graphic file (type png)
-
-<use graficos/output_31_1.png>
-Package pdftex.def Info: graficos/output_31_1.png used on input line 196.
-(pdftex.def)             Requested size: 429.00238pt x 189.48729pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 196--198
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-[11 <./graficos/output_31_1.png>]
-<graficos/output_34_1.png, id=142, 1439.3775pt x 627.34375pt>
-File: graficos/output_34_1.png Graphic file (type png)
-
-<use graficos/output_34_1.png>
-Package pdftex.def Info: graficos/output_34_1.png used on input line 210.
-(pdftex.def)             Requested size: 429.00238pt x 186.9793pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 210--212
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[12 <./graficos/output_34_1.png>]
-<graficos/output_37_1.png, id=148, 1411.2725pt x 627.34375pt>
-File: graficos/output_37_1.png Graphic file (type png)
-
-<use graficos/output_37_1.png>
-Package pdftex.def Info: graficos/output_37_1.png used on input line 227.
-(pdftex.def)             Requested size: 429.00238pt x 190.70299pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 227--229
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
-
- []
-
-<graficos/output_39_1.png, id=149, 1444.39626pt x 627.34375pt>
-File: graficos/output_39_1.png Graphic file (type png)
-
-<use graficos/output_39_1.png>
-Package pdftex.def Info: graficos/output_39_1.png used on input line 239.
-(pdftex.def)             Requested size: 429.00238pt x 186.32837pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 239--241
- [] 
- []
-
-[13 <./graficos/output_37_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
-
- []
-
-<graficos/output_41_0.png, id=156, 1431.3475pt x 632.3625pt>
-File: graficos/output_41_0.png Graphic file (type png)
-
-<use graficos/output_41_0.png>
-Package pdftex.def Info: graficos/output_41_0.png used on input line 247.
-(pdftex.def)             Requested size: 429.00238pt x 189.52689pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 247--249
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
- []
-
-<graficos/output_44_0.png, id=157, 1430.34375pt x 627.34375pt>
-File: graficos/output_44_0.png Graphic file (type png)
-
-<use graficos/output_44_0.png>
-Package pdftex.def Info: graficos/output_44_0.png used on input line 259.
-(pdftex.def)             Requested size: 429.00238pt x 188.15671pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 259--261
- [] 
- []
-
-[14 <./graficos/output_39_1.png> <./graficos/output_41_0.png>] [15 <./graficos/
-output_44_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
-
- []
-
-<graficos/table_2.png, id=170, 569.12625pt x 105.39375pt>
-File: graficos/table_2.png Graphic file (type png)
-
-<use graficos/table_2.png>
-Package pdftex.def Info: graficos/table_2.png used on input line 293.
-(pdftex.def)             Requested size: 312.00119pt x 57.78018pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
-
- []
-
-[16 <./graficos/table_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
-
- []
-
-<graficos/output_52_0.png, id=176, 1205.50375pt x 516.93124pt>
-File: graficos/output_52_0.png Graphic file (type png)
-
-<use graficos/output_52_0.png>
-Package pdftex.def Info: graficos/output_52_0.png used on input line 310.
-(pdftex.def)             Requested size: 429.00238pt x 183.95752pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 310--312
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
-
- []
-
-[17 <./graficos/output_52_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 325--328
-
- []
-
-<graficos/output_55_1.png, id=182, 435.6275pt x 446.66875pt>
-File: graficos/output_55_1.png Graphic file (type png)
-
-<use graficos/output_55_1.png>
-Package pdftex.def Info: graficos/output_55_1.png used on input line 330.
-(pdftex.def)             Requested size: 429.00238pt x 439.87248pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 330--332
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
-
- []
-
-[18 <./graficos/output_55_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
-
- []
-
-<graficos/output_58_0.png, id=188, 1292.83pt x 1003.75pt>
-File: graficos/output_58_0.png Graphic file (type png)
-
-<use graficos/output_58_0.png>
-Package pdftex.def Info: graficos/output_58_0.png used on input line 355.
-(pdftex.def)             Requested size: 390.0pt x 302.79677pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
-
- []
-
-[19 <./graficos/output_58_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-<graficos/table_3.png, id=195, 404.51125pt x 450.68375pt>
-File: graficos/table_3.png Graphic file (type png)
-
-<use graficos/table_3.png>
-Package pdftex.def Info: graficos/table_3.png used on input line 381.
-(pdftex.def)             Requested size: 234.00238pt x 260.71593pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
-
+ [2]
+Overfull \hbox (3.30981pt too wide) in paragraph at lines 63--64
+[]\OT1/cmr/m/n/12 Se uti-lizaron difer-entes busquedas de hiper-paramet-ros, en
+-tre el-las "Grid-
  []
 
-[20 <./graficos/table_3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
+Overfull \hbox (13.3671pt too wide) in paragraph at lines 67--68
+[]\OT1/cmr/m/n/12 Se re-aliz^^So Clus-ter-ing me-di-ante la fun-cion "KMeans" d
+e la li-brer^^S^^Pa \OT1/cmr/bx/n/12 sklearn\OT1/cmr/m/n/12 . 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
-
- []
-
-<graficos/output_61_0.png, id=202, 1370.11874pt x 1007.765pt>
-File: graficos/output_61_0.png Graphic file (type png)
-
-<use graficos/output_61_0.png>
-Package pdftex.def Info: graficos/output_61_0.png used on input line 398.
-(pdftex.def)             Requested size: 429.00238pt x 315.54088pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 398--400
- [] 
- []
-
-[21 <./graficos/output_61_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-
- []
-
-<graficos/output_63_0.png, id=208, 1745.52126pt x 718.685pt>
-File: graficos/output_63_0.png Graphic file (type png)
-
-<use graficos/output_63_0.png>
-Package pdftex.def Info: graficos/output_63_0.png used on input line 406.
-(pdftex.def)             Requested size: 429.00238pt x 176.63315pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 406--408
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
-
- []
-
-<graficos/output_65_0.png, id=209, 1748.5325pt x 718.685pt>
-File: graficos/output_65_0.png Graphic file (type png)
-
-<use graficos/output_65_0.png>
-Package pdftex.def Info: graficos/output_65_0.png used on input line 419.
-(pdftex.def)             Requested size: 429.00238pt x 176.3261pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 419--421
- [] 
- []
-
-[22 <./graficos/output_63_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--436
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
-
- []
-
-<graficos/output_67_0.png, id=215, 1431.3475pt x 633.36626pt>
-File: graficos/output_67_0.png Graphic file (type png)
-
-<use graficos/output_67_0.png>
-Package pdftex.def Info: graficos/output_67_0.png used on input line 441.
-(pdftex.def)             Requested size: 429.00238pt x 189.82771pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 441--443
- [] 
- []
-
-[23 <./graficos/output_65_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-
- []
-
-[24 <./graficos/output_67_0.png>]
-<graficos/output_69_1.png, id=226, 962.59625pt x 414.54875pt>
-File: graficos/output_69_1.png Graphic file (type png)
-
-<use graficos/output_69_1.png>
-Package pdftex.def Info: graficos/output_69_1.png used on input line 461.
-(pdftex.def)             Requested size: 429.00238pt x 184.74876pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 461--463
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 466--468
-
- []
-
-<graficos/output_70_1.png, id=227, 962.59625pt x 410.53375pt>
-File: graficos/output_70_1.png Graphic file (type png)
-
-<use graficos/output_70_1.png>
-Package pdftex.def Info: graficos/output_70_1.png used on input line 470.
-(pdftex.def)             Requested size: 467.99881pt x 199.59097pt.
-
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 470--472
- [] 
- []
-
-[25 <./graficos/output_69_1.png> <./graficos/output_70_1.png>]
-<graficos/output_72_1.png, id=235, 1470.49374pt x 522.95375pt>
-File: graficos/output_72_1.png Graphic file (type png)
-
-<use graficos/output_72_1.png>
-Package pdftex.def Info: graficos/output_72_1.png used on input line 478.
-(pdftex.def)             Requested size: 429.00238pt x 152.56238pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 478--480
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
-
- []
-
-<graficos/output_73_1.png, id=236, 1431.3475pt x 523.9575pt>
-File: graficos/output_73_1.png Graphic file (type png)
-
-<use graficos/output_73_1.png>
-Package pdftex.def Info: graficos/output_73_1.png used on input line 489.
-(pdftex.def)             Requested size: 429.00238pt x 157.03656pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 489--491
- [] 
- []
-
-
-Overfull \hbox (9.10419pt too wide) in paragraph at lines 494--495
-\OT1/cmr/m/n/12 gr^^Safico se pre-tende ex-hibir la can-ti-dad de usuar-ios pro
-ve-nientes de una campa~na
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
-
- []
-
-[26 <./graficos/output_72_1.png> <./graficos/output_73_1.png>]
-<graficos/output_75_1.png, id=243, 1431.3475pt x 522.95375pt>
-File: graficos/output_75_1.png Graphic file (type png)
-
-<use graficos/output_75_1.png>
-Package pdftex.def Info: graficos/output_75_1.png used on input line 497.
-(pdftex.def)             Requested size: 429.00238pt x 156.73572pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 497--499
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
-
- []
-
-[27 <./graficos/output_75_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
-
- []
-
-<graficos/output_78_1.png, id=249, 1457.445pt x 522.95375pt>
-File: graficos/output_78_1.png Graphic file (type png)
-
-<use graficos/output_78_1.png>
-Package pdftex.def Info: graficos/output_78_1.png used on input line 510.
-(pdftex.def)             Requested size: 429.00238pt x 153.9269pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 510--512
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
-
- []
-
-<graficos/table_4.png, id=250, 374.39874pt x 362.35374pt>
-File: graficos/table_4.png Graphic file (type png)
-
-<use graficos/table_4.png>
-Package pdftex.def Info: graficos/table_4.png used on input line 527.
-(pdftex.def)             Requested size: 272.99881pt x 264.22852pt.
- [28 <./graficos/output_78_1.png>]
-<graficos/output_83_1.png, id=256, 1418.29875pt x 522.95375pt>
-File: graficos/output_83_1.png Graphic file (type png)
-
-<use graficos/output_83_1.png>
-Package pdftex.def Info: graficos/output_83_1.png used on input line 533.
-(pdftex.def)             Requested size: 429.00238pt x 158.18002pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 533--535
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
-
- []
-
-[29 <./graficos/table_4.png> <./graficos/output_83_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 543--544
-
- []
-
-<graficos/table_5.png, id=263, 288.07625pt x 213.79875pt>
-File: graficos/table_5.png Graphic file (type png)
-
-<use graficos/table_5.png>
-Package pdftex.def Info: graficos/table_5.png used on input line 554.
-(pdftex.def)             Requested size: 195.0pt x 144.7255pt.
- [30 <./graficos/table_5.png>]
-<graficos/table_6.png, id=269, 248.93pt x 324.21124pt>
-File: graficos/table_6.png Graphic file (type png)
-
-<use graficos/table_6.png>
-Package pdftex.def Info: graficos/table_6.png used on input line 572.
-(pdftex.def)             Requested size: 195.0pt x 253.97705pt.
-
-<graficos/table_7.png, id=270, 283.0575pt x 308.15125pt>
-File: graficos/table_7.png Graphic file (type png)
-
-<use graficos/table_7.png>
-Package pdftex.def Info: graficos/table_7.png used on input line 580.
-(pdftex.def)             Requested size: 195.0pt x 212.29074pt.
- [31 <./graficos/table_6.png>]
-<graficos/output_95_0.png, id=277, 1204.5pt x 738.76pt>
-File: graficos/output_95_0.png Graphic file (type png)
-
-<use graficos/output_95_0.png>
-Package pdftex.def Info: graficos/output_95_0.png used on input line 586.
-(pdftex.def)             Requested size: 429.00238pt x 263.12398pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 586--588
- [] 
- []
-
-<graficos/output_97_0.png, id=278, 1212.53pt x 738.76pt>
-File: graficos/output_97_0.png Graphic file (type png)
-
-<use graficos/output_97_0.png>
-Package pdftex.def Info: graficos/output_97_0.png used on input line 591.
-(pdftex.def)             Requested size: 429.00238pt x 261.37672pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 591--593
- [] 
- []
-
-[32 <./graficos/table_7.png> <./graficos/output_95_0.png>] [33 <./graficos/outp
-ut_97_0.png>] <graficos/table_8.png, id=290, 273.02pt x 332.24126pt>
-File: graficos/table_8.png Graphic file (type png)
-
-<use graficos/table_8.png>
-Package pdftex.def Info: graficos/table_8.png used on input line 602.
-(pdftex.def)             Requested size: 195.0pt x 237.29721pt.
-
-<graficos/table_9.png, id=291, 282.05376pt x 360.34625pt>
-File: graficos/table_9.png Graphic file (type png)
-
-<use graficos/table_9.png>
-Package pdftex.def Info: graficos/table_9.png used on input line 612.
-(pdftex.def)             Requested size: 195.0pt x 249.12854pt.
- [34 <./graficos/table_8.png>] [35 <./graficos/table_9.png>] <graficos/map_1.pn
-g, id=302, 1093.08376pt x 633.36626pt>
-File: graficos/map_1.png Graphic file (type png)
-
-<use graficos/map_1.png>
-Package pdftex.def Info: graficos/map_1.png used on input line 621.
-(pdftex.def)             Requested size: 467.99881pt x 271.17279pt.
-
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 621--622
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
-
- []
-
-[36 <./graficos/map_1.png>]
-<graficos/map_2.png, id=308, 929.4725pt x 668.4975pt>
-File: graficos/map_2.png Graphic file (type png)
- <use graficos/map_2.png>
-Package pdftex.def Info: graficos/map_2.png used on input line 634.
-(pdftex.def)             Requested size: 429.00238pt x 308.54282pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 634--635
- [] 
- []
-
-[37 <./graficos/map_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 644--645
-
- []
-
-
-Overfull \hbox (15.52081pt too wide) in paragraph at lines 651--653
-[] \OT1/cmr/bx/n/12 Prome-dio de vis-i-tas de per-sonas que com-pran\OT1/cmr/m/
-n/12 : 1.6368715083798884 
- []
-
-<graficos/output_110_1.png, id=315, 1420.30624pt x 899.36pt>
-File: graficos/output_110_1.png Graphic file (type png)
-
-<use graficos/output_110_1.png>
-Package pdftex.def Info: graficos/output_110_1.png used on input line 660.
-(pdftex.def)             Requested size: 429.00238pt x 271.64897pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 660--661
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 666--667
-
- []
-
-
-Overfull \hbox (39.53635pt too wide) in paragraph at lines 668--671
-[]\OT1/cmr/bx/n/12 Porcentaje de usuar-ios que re-alizaron solo una com-pra\OT1
-/cmr/m/n/12 : 69.1340782122905 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 668--671
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 673--675
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--678
-
- []
-
-[38 <./graficos/output_110_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 680--683
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 684--686
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
-
- []
-
-
-Overfull \hbox (33.07928pt too wide) in paragraph at lines 690--692
-[]\OT1/cmr/bx/n/12 Relaci^^Son en-tre to-tal de check-outs y to-tal de com-pras
- \OT1/cmr/m/n/12 3.4741366533274047 
- []
-
-[39] <graficos/table_10.png, id=325, 599.23875pt x 87.32625pt>
-File: graficos/table_10.png Graphic file (type png)
 
-<use graficos/table_10.png>
-Package pdftex.def Info: graficos/table_10.png used on input line 696.
-(pdftex.def)             Requested size: 350.99762pt x 51.1516pt.
 
-Overfull \hbox (32.69603pt too wide) in paragraph at lines 701--703
-[]\OT1/cmr/bx/n/12 Usuarios que in-gre-san por una campa~na pub-lic-i-taria\OT1
-/cmr/m/n/12 : 8.190248475211808 
+Overfull \hbox (0.25706pt too wide) in paragraph at lines 69--70
+[]\OT1/cmr/m/n/12 Los sigu-ientes clasi-fi-cadores fueron im-por-ta-dos: "xg-bo
+ost", "light-gbm",
  []
 
-<graficos/output_127_0.png, id=326, 1187.43625pt x 899.36pt>
-File: graficos/output_127_0.png Graphic file (type png)
 
-<use graficos/output_127_0.png>
-Package pdftex.def Info: graficos/output_127_0.png used on input line 705.
-(pdftex.def)             Requested size: 429.00238pt x 324.92209pt.
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 705--707
- [] 
  []
 
-[40 <./graficos/table_10.png> <./graficos/output_127_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+[3] [4] [5] [6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[41] [42]
-Underfull \hbox (badness 1668) in paragraph at lines 762--764
+[9] [10]
+Underfull \hbox (badness 1668) in paragraph at lines 155--157
 []\OT1/cmr/m/n/12 Matplotlib: Python plot-ting | Mat-plotlib 3.0.0 doc-u-men-ta
 -tion,
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 780.
-[43pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+[11pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.780 \end{document}
+l.173 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.780 \end{document}
+l.173 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.780 \end{document}
+l.173 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.780 \end{document}
+l.173 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.780 \end{document}
+l.173 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.780 \end{document}
+l.173 \end{document}
                     ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 780.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 780.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 780.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 173.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 780.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 6168 strings out of 494953
- 90526 string characters out of 6180976
- 169363 words of memory out of 5000000
- 9288 multiletter control sequences out of 15000+600000
- 8410 words of font info for 30 fonts, out of 8000000 for 9000
+ 5878 strings out of 494953
+ 84608 string characters out of 6180976
+ 166363 words of memory out of 5000000
+ 9097 multiletter control sequences out of 15000+600000
+ 8063 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,13n,43p,425b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,12n,43p,408b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (43 pages, 2150240 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (11 pages, 63652 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 475 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
