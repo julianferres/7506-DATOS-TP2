@@ -4,8 +4,15 @@
 \contentsline {subsection}{\numberline {1.3}Lenguajes y librer\IeC {\'\i }as utilizados}{2}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}Repositorio de Github}{3}{subsection.1.4}
 \contentsline {section}{\numberline {2}Breve an\IeC {\'a}lisis del set de Datos}{4}{section.2}
-\contentsline {section}{\numberline {3}Featuring Engineering}{5}{section.3}
-\contentsline {section}{\numberline {4}Clasificadores}{6}{section.4}
-\contentsline {section}{\numberline {5}Tuning}{7}{section.5}
-\contentsline {section}{\numberline {6}Ensamble}{8}{section.6}
-\contentsline {section}{\numberline {7}Conclusiones generales}{9}{section.7}
+\contentsline {section}{\numberline {3}Featuring Engineering segunda entrega (Train 100\%)}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1} Features sobre acciones por rango de tiempo }{5}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Acciones en el \IeC {\'u}ltimo mes}{5}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Acciones en los \IeC {\'u}ltimos 15 d\IeC {\'\i }as}{5}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Acciones en la \IeC {\'u}ltima semana}{5}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Acciones en los \IeC {\'u}ltimos 3 d\IeC {\'\i }as}{5}{subsubsection.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Features de acciones del usuario}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Features de modelos}{6}{subsection.3.3}
+\contentsline {section}{\numberline {4}Clasificadores}{7}{section.4}
+\contentsline {section}{\numberline {5}Tuning}{8}{section.5}
+\contentsline {section}{\numberline {6}Ensamble}{9}{section.6}
+\contentsline {section}{\numberline {7}Conclusiones generales}{10}{section.7}
