@@ -170,8 +170,111 @@ Link: \url{https://github.com/emabrea/7506-DATOS-TP2.git}
 \newpage
 \section{Tuning}
 
+Grid Search y Random Search en KNN
+
+En los diferentes algoritmos vamos a llamar parámetros a aquellos valores que el algo-
+ritmo encuentra a partir de los datos y vamos a llamar hiper-parámetros a
+aquellos datos que el algoritmo necesita para poder funcionar.
+
+Llamaremos óptimos a los hiper-parámetros que logren para un set de Datos maximizar determinada métrica, en este caso, utilizamos la métrica ROC AUC.\
+
+Para encontrar los hiper-parámetros óptimos para un algoritmo pueden usarse dos métodos: Grid-Search o Random-Search.\\
+
+\subsection{Grid-Search}
+
+En un Grid-Search probamos todas las combinaciones posibles dentro de una lista de valores posibles para cada hiper-parámetro.
+
+En este caso, debido a la cantidad de hiper-parámetros , se decidió comenzar en las listas de valores posibles para cada uno con un ”paso” grueso.
+
+Esto reduce en un principio la cantidad de combinaciones a ejecutar. Luego se podra refinar la busqueda en la zona donde resultaron optimos nuestros hiper-parametros iniciales.
+
+Este proceso fue especialmente necesario cuando los hiper-parámetros tomaban valores reales.
+
+Cuando la cantidad de hiper-parámetros es realmente muy grande la combinatoria a realizar puede resultar muy ineficiente, en estos casos puede re-
+currirse al método de Random-Search.
+
+\subsection{Random-Search}
+
+Como la cantidad de hiperparametros era elevada, posteriormente se recurrió al método de Random-Search,
+
+En este método controlamos cuantas iteraciones realizamos de nuestro algoritmo y por cada iteración seleccionamos los valores de los
+hiper-parámetros al azar dentro de un rango preestablecido. 
+
+Cabe aclarar que este método no es tan preciso como un grid-search pero es mucho mas rápido, pudiendo invertir mayor parte del tiempo a la creación de Features.
+
+\subsection{Aplicación a nuestro algoritmo}
+
+En uno de nuestros primeros ensambles (constituídos por un Random Forest y un XGBoost) se aplico el método de Random Search con el fin de poder encontrar (u obtener una buena aproximacióń a ellos) de los hiperparametros:\\
+
+\underline{Para XGBoost: }
+
+\begin{itemize}
+	\item Peso de
+\end{itemize}
+
+
+
+\underline{Para Random Forest:}
+
+\begin{itemize}
+	
+	\item Peso de una de las clase 1 : La lista de este hiperparametro contenía los números del 1 al 10
+	
+	\item Criterio: Este hiper-parámetro podía ser : \{'gini', 'entropy'\}
+
+\end{itemize}
+
+
+Es muy importante aclarar que para la validación de hiper-parámetros se utilizó K-fold cross validation, con K= 10.
+
+Es decir, de nuestro set de datos, el 10\% fue usado para validar los hiperparametros cada vez.
+
+
 \newpage
 \section{Ensamble}
+
+Los mejores algoritmos de ML suelen surgir de la combinación de varios algo-
+ritmos. Es muy raro que un solo algoritmo de ML logre mejores resultados que
+un ensamble. Esto pudo verse en las sucesivas entregas, donde utilizar un ensamble nos traía
+resultados mas satisfactorios que usar los algoritmos en soledad.
+
+\subsection{Combinando Algoritmos Diferentes}
+
+Estos procesos suelen ser la clave para obtener un mejor resultado, ya que permitieron aprovechar el poder expresivo
+de varios modelos completamente diferentes para obtener un resultado común.
+En nuestro caso, el problema a abordar era de clasificación.
+
+\subsubsection{Majority Voting}
+
+Tenemos varios clasificadores distintos para un cierto problema, cada uno de ellos produce un resultado y queremos obtener un 
+ resultado final. Una aproximación simple es ver cual es la clase que tiene mayoría entre todos los clasificadores.
+
+En un primer momento, se decidió utilizar este tipo de ensamble debido a su simplicidad, 
+pero nos encontramos que el mismo tiene sentido cuando la predicción es directamente la clase.
+Si la predicción es la probabilidad de cada clase entonces obtuvimos que otros métodos funcionan mejor. 
+
+Cuando la correlación entre los modelos es baja el resultado del ensamble, en general, mejora notablemente el resultado de cada modelo individual. 
+\\
+
+Una primera conclusión es que dados muchos clasificadores es conveniente elegir un conjunto que tenga buenos resultados y que estén muy poco correlacionados.
+
+\subsubsection{Averaging}
+
+Promediar el resultado de varios clasificadores es un método muy popular que
+funciona en muchos problemas distintos: regresión, clasificación (ya sea para
+predecir clases o probabilidades), etc. La idea principal es reducir el overfitting.
+
+En general, una separación suave entre las clases es mejor que una separación
+muy irregular y promediar clasificadores logra esto.
+
+Cuando promediamos clasificadores que predicen la probabilidad de las clases, hubo
+que prestar especial atención porque cada clasificador individual puede tener una calibración completamente diferente. 
+
+Uno puede dar probabilidades muy cercanas a 1s y 0s mientras que otro, a lo mejor, se mantiene dentro de un cierto rango.
+Una solución para esto es convertir cada probabilidad de un rango entre 1 y n, siendo n el total de personas a predecir. La persona con mayor probabilidad tiene 1,
+el segundo 2, etc, y el de menor probabilidad, n, sin importar el valor de las probabilidades. Si hacemos esto para todos los clasificadores podemos luego
+promediar los rangos y convertir estos promedios en un número entre 0 y 1 para la probabilidad final.
+
 
 \newpage
 \section{Conclusiones generales}

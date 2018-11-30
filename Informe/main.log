@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  26 NOV 2018 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  29 NOV 2018 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,81 +660,96 @@ Overfull \hbox (22.4877pt too wide) in paragraph at lines 89--89
 []\OT1/cmr/bx/n/17.28 Featuring En-gi-neer-ing se-gunda en-trega (Train
  []
 
-[5] [6] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
 [10] [11]
-Underfull \hbox (badness 1668) in paragraph at lines 226--228
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+[12] [13]
+Underfull \hbox (badness 1668) in paragraph at lines 329--331
 []\OT1/cmr/m/n/12 Matplotlib: Python plot-ting | Mat-plotlib 3.0.0 doc-u-men-ta
 -tion,
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
-[12pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
+[14pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \end{document}
+l.347 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \end{document}
+l.347 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \end{document}
+l.347 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \end{document}
+l.347 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \end{document}
+l.347 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.244 \end{document}
+l.347 \end{document}
                     ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 347.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
  ) 
 Here is how much of TeX's memory you used:
- 5893 strings out of 494953
- 84775 string characters out of 6180976
- 166363 words of memory out of 5000000
- 9104 multiletter control sequences out of 15000+600000
+ 5910 strings out of 494953
+ 84962 string characters out of 6180976
+ 167363 words of memory out of 5000000
+ 9113 multiletter control sequences out of 15000+600000
  8063 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,12n,43p,408b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,13n,43p,408b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (12 pages, 66696 bytes).
+Output written on main.pdf (14 pages, 74510 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 207 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
