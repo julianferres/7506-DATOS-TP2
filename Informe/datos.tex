@@ -165,7 +165,7 @@ Link: \url{https://github.com/emabrea/7506-DATOS-TP2.git}
 	\end{itemize}	
 
 
-\section{Featuring Engineering cuarta entrega}
+\section{Featuring Engineering tercera entrega}
 
 \subsection{Cantidad de valores diferentes por característica}
 
@@ -188,6 +188,24 @@ Link: \url{https://github.com/emabrea/7506-DATOS-TP2.git}
 
 	\item eventos distintos
 
+\end{itemize}
+
+\section{Featuring Engineering cuarta entrega}
+\subsection{Algoritmos de Clustering}
+
+Luego de la clase sobre clustering, propusimos agregar como features los resultados de aplicar distintos algoritmos de clustering al set de datos. Se probó con K-means, K-means++, DBScan y HDBScan. Por prueba y error se fueron determinando los hiper parámetros k más convenientes. Tanto K-means como DBScan fueron posteriormente descartados ya que se notó que empeoraban los resultados.
+
+Una posible interpretación de estos features es que estos algoritmos de clustering lograron identificar distintos grupos o sectores entre los visitantes al sitio, que ayudan a determinar si es probable o no que compren.
+
+Features agregados:
+\begin{itemize}
+	\item k-means++, k=2
+	\item k-means++, k=3
+	\item k-means++, k=4
+	\item k-means++, k=5
+	\item k-means++, k=50
+	\item k-means++, k=100
+	\item HDBScan, k=100
 \end{itemize}
 
 \newpage

@@ -12,16 +12,18 @@
 \contentsline {subsubsection}{\numberline {3.1.4}Acciones en los \IeC {\'u}ltimos 3 d\IeC {\'\i }as}{5}{subsubsection.3.1.4}
 \contentsline {subsection}{\numberline {3.2}Features de acciones del usuario}{5}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Features de modelos}{6}{subsection.3.3}
-\contentsline {section}{\numberline {4}Featuring Engineering cuarta entrega}{6}{section.4}
+\contentsline {section}{\numberline {4}Featuring Engineering tercera entrega}{6}{section.4}
 \contentsline {subsection}{\numberline {4.1}Cantidad de valores diferentes por caracter\IeC {\'\i }stica}{6}{subsection.4.1}
-\contentsline {section}{\numberline {5}Featuring Engineering quinta entrega}{7}{section.5}
-\contentsline {section}{\numberline {6}Clasificadores}{9}{section.6}
-\contentsline {section}{\numberline {7}Tuning}{10}{section.7}
-\contentsline {subsection}{\numberline {7.1}Grid-Search}{10}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Random-Search}{10}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Aplicaci\IeC {\'o}n a nuestro algoritmo}{11}{subsection.7.3}
-\contentsline {section}{\numberline {8}Ensamble}{12}{section.8}
-\contentsline {subsection}{\numberline {8.1}Combinando Algoritmos Diferentes}{12}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Majority Voting}{12}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}Averaging}{12}{subsubsection.8.1.2}
-\contentsline {section}{\numberline {9}Conclusiones generales}{14}{section.9}
+\contentsline {section}{\numberline {5}Featuring Engineering cuarta entrega}{6}{section.5}
+\contentsline {subsection}{\numberline {5.1}Algoritmos de Clustering}{6}{subsection.5.1}
+\contentsline {section}{\numberline {6}Featuring Engineering quinta entrega}{8}{section.6}
+\contentsline {section}{\numberline {7}Clasificadores}{10}{section.7}
+\contentsline {section}{\numberline {8}Tuning}{11}{section.8}
+\contentsline {subsection}{\numberline {8.1}Grid-Search}{11}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Random-Search}{11}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Aplicaci\IeC {\'o}n a nuestro algoritmo}{12}{subsection.8.3}
+\contentsline {section}{\numberline {9}Ensamble}{13}{section.9}
+\contentsline {subsection}{\numberline {9.1}Combinando Algoritmos Diferentes}{13}{subsection.9.1}
+\contentsline {subsubsection}{\numberline {9.1.1}Majority Voting}{13}{subsubsection.9.1.1}
+\contentsline {subsubsection}{\numberline {9.1.2}Averaging}{13}{subsubsection.9.1.2}
+\contentsline {section}{\numberline {10}Conclusiones generales}{15}{section.10}
