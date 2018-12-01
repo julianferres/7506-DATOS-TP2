@@ -80,8 +80,14 @@ Link: \url{https://github.com/emabrea/7506-DATOS-TP2.git}
 
 \newpage
 \section{Breve análisis del set de Datos}
+\subsection{Balance del set de datos}
+Al haber muchas más visitas al sitio que compras de productos, el set de datos resulta ser muy desproporcionado, encontrándose muchas mas labels con 0 (no compra) que 1 (compra). Esto es un gran problema para los algoritmos de machine learning.
 
+Las soluciones a este problema son acotadas, ya que se dispone de un set de datos chico. Con la librería \textbf{imbalanced-learn} probamos distintas soluciones con oversampling, undersampling o combinaciones de ambos, pero no resultaron.
 
+Esto era lo esperado, ya que hacer oversampling significaría inventar la actividad de clientes, mientras que haciendo undersampling quedan demasiados pocos datos.
+
+El problema se solucionó utilizando los parametros de los algoritmos de clasificación que permiten darle distinto peso a cada label.
 
 
 
@@ -302,6 +308,8 @@ Dicho esto, se decidió incluir los siguientes features representativos sobre el
 	\item Media de los precios
 \end{itemize}
 
+\section{Featuring Engineering quinta entrega}
+
 \newpage
 \section{Clasificadores}
 
@@ -446,7 +454,7 @@ Cada mes más usuarios compraron a partir de una campaña, pero como se vió en 
 
 \item Si bien la mayoría de los usuarios son de Brasil, se noto una creciente actividad en los Estados Unidos. Por lo tanto, una propuesta es traducir la página web al inglés, para promover la visita de personas de dicho país. También notamos un posible negocio futuro en Argentina, donde se debe hacer hincapié en la diferencia de precio con respecto a otros vendedores.  
 
-\item Por último, se debe volver a hacer un análisis de datos en unos meses, y verificar el progreso de la empresa en base a las recomendaciones propuestas, para determinar el correcto camino.
+\item Por último, se debe volver a hacer un análisis de datos en unos meses, y verificar el progreso de la empresa en base a las recomendaciones propuestas, para determinar el correcto camino a seguir.
 
 \end{itemize}
 
