@@ -92,9 +92,41 @@ El problema se solucionó utilizando los parametros de los algoritmos de clasifi
 
 
 \newpage
-\section{Featuring Engineering segunda entrega (Train 100\%)}
+\section{Featuring Engineering}
 
-\subsection{ Features sobre acciones por rango de tiempo }
+\subsection{Encoding}
+
+El dataset contenía varias variables categóricas, las cuales no son aceptadas por
+múltiples algoritmos de clasificación como por ejemplo XGBoost.
+
+Para poder utilizar las mismas, se procedió a codificarlas con los siguientes tipos de
+codificación:
+
+\subsubsection{Count Encoding}
+Consiste en reemplazar las categorías por la cantidad de
+apariciones de las mismas en el set de datos. Resultó la codificación más simple de
+implementar y fue la primera que utilizamos.
+
+\subsubsection{One Hot Encoding}
+
+Consiste en dividir el atributo en tantas columnas como valores posibles puede tener y usar cada columna como un dato binario indicando si el atributo toma o no dicho
+valor. One-hot encoding es una codificación muy popular pero lamentablemente
+no escala muy bien. En primer lugar es necesario construir en memoria un
+diccionario por cada feature en donde asociaremos un número a cada posible
+valor de cada columna, este diccionario puede ser demasiado grande. Otro
+problema serio es que si una columna puede tomar muchos valores diferentes
+posibles, por ejemplo la columna \textbf{model}, con  entonces necesitamos cientos de nuevas columnas para representar los datos, esto hacía que ciertas a ciertas columnas ni siquiera se le intente aplicar dicho método ya que no es viable.
+
+
+\subsubsection{Mean Encoding}
+Esta codificación consiste en reemplazar las categorías con el
+promedio de los valores a predecir en la categoría. Esto implica que por cada categoría, se calcula el promedio entre las postulaciones y no postulaciones y se
+reemplaza la categoría por ese promedio.
+
+
+\subsection{Featuring Engineering segunda entrega (Train 100\%)}
+
+\subsubsection{ Features sobre acciones por rango de tiempo }
 
 		
 		\subsubsection{Acciones en el último mes}
@@ -143,7 +175,7 @@ El problema se solucionó utilizando los parametros de los algoritmos de clasifi
 
 
 
-\subsection{Features de acciones del usuario}
+\subsubsection{Features de acciones del usuario}
 
 	\begin{itemize}
 		\item Total visitas usuario
@@ -162,7 +194,7 @@ El problema se solucionó utilizando los parametros de los algoritmos de clasifi
 	
 
 
-\subsection{Features de modelos}
+\subsubsection{Features de modelos}
 
 	\begin{itemize}
 		
@@ -170,8 +202,11 @@ El problema se solucionó utilizando los parametros de los algoritmos de clasifi
 			
 	\end{itemize}	
 
+\subsection{Featuring Engineering tercera entrega}
 
-\section{Featuring Engineering tercera entrega}
+	Mejores hiper parametros
+
+\subsection{Featuring Engineering cuarta entrega}
 
 \subsection{Cantidad de valores diferentes por característica}
 
@@ -196,26 +231,8 @@ El problema se solucionó utilizando los parametros de los algoritmos de clasifi
 
 \end{itemize}
 
-\section{Featuring Engineering cuarta entrega}
-\subsection{Algoritmos de Clustering}
-
-Luego de la clase sobre clustering, propusimos agregar como features los resultados de aplicar distintos algoritmos de clustering al set de datos. Se probó con K-means, K-means++, DBScan y HDBScan. Por prueba y error se fueron determinando los hiper parámetros k más convenientes. Tanto K-means como DBScan fueron posteriormente descartados ya que se notó que empeoraban los resultados.
-
-Una posible interpretación de estos features es que estos algoritmos de clustering lograron identificar distintos grupos o sectores entre los visitantes al sitio, que ayudan a determinar si es probable o no que compren.
-
-Features agregados:
-\begin{itemize}
-	\item k-means++, k=2
-	\item k-means++, k=3
-	\item k-means++, k=4
-	\item k-means++, k=5
-	\item k-means++, k=50
-	\item k-means++, k=100
-	\item HDBScan, k=100
-\end{itemize}
-
 \newpage
-\section{Featuring Engineering quinta entrega}
+\subsection{Featuring Engineering quinta entrega}
 
 En la quinta entrega se decidió ir mas alla del set de datos provisto por el enunciado, debido a que se noto la ausencia de precios en 
 los modelos de los equipos, es por eso que investigando en el sitio web de Trocafone, se decidió incluir los precios de los modelos más populares.
@@ -224,7 +241,7 @@ A continuación se muestra la lista de precios incluidos para entrenar el algori
 Dicho esto, se decidió incluir los siguientes features representativos sobre el precio de los equipos en los eventos de cada usuario:
 
 \begin{center}
-	{\large 	
+	 	
 		\begin{tabular}{lll}
 			\hline
 			Model&Capacidad(GB)&Precio \\
@@ -256,13 +273,13 @@ Dicho esto, se decidió incluir los siguientes features representativos sobre el
 			
 		\hline
 		\end{tabular}
-	}\\
+	\\
 	
 	Tabla de celulares Iphone
 \end{center}
 
 \begin{center}
-	{\large 	
+		
 		\begin{tabular}{lll}
 			\hline
 			Model&Capacidad (GB)&Precio \\
@@ -298,8 +315,14 @@ Dicho esto, se decidió incluir los siguientes features representativos sobre el
 
 		\hline
 	\end{tabular}
-}
+	\\
+	
+	Lista de Moviles con su almacenamiento y precio correspondiente.
+
 \end{center}
+
+
+De la lista de precios de moviles se pudo extraer algunas características para ser tomadas como features:
 
 \begin{itemize}
 	\item Precio máximo
@@ -308,18 +331,91 @@ Dicho esto, se decidió incluir los siguientes features representativos sobre el
 	\item Media de los precios
 \end{itemize}
 
-\section{Featuring Engineering quinta entrega}
+\subsection{Featuring Engineering sexta entrega}
+
+Se pudo observar en Select K-Best y en los feature importance de cada algoritmo que los features relacionados a Visitas, Checkouts y Conversion tenían un papel relevante a la hora de realizar predicciones, es por eso que se decidió intensificar la cantidad de features en dichas areas. Esto dió como resultado la inclusión de los siguientes:
+
+\begin{itemize}
+	
+	\item visitas último día
+	
+	\item checkouts últimos 15 días
+	
+	\item checkouts últimos 3 días
+	
+	\item checkouts último día
+	
+	\item compras ultimos 3 días
+	
+	\item compras ultimos 15 días
+	
+	\item compras ultimo día
+	
+\end{itemize}
+
+
+
+\subsection{Featuring Engineering septima entrega}
+
+		Siguiendo la corriente de pensamiento que nos llevó a la sexta entrega, se decidió reforzar los features con el agregado de los siguientes:	
+		
+	
+\begin{itemize}
+	
+
+	\item visitas últimos 2 días 
+	\item checkouts últimos 2 días
+	\item checkouts últimos 4 días
+	\item compras últimos 2 días
+	\item compras últimos 5 días
+	\item compras últimos 4 días
+	
+	
+\end{itemize}
+
+\section{Algoritmos de Clustering}
+
+Luego de la clase sobre clustering, propusimos agregar como features los resultados de aplicar distintos algoritmos de clustering al set de datos. Se probó con K-means, K-means++, DBScan y HDBScan. Por prueba y error se fueron determinando los hiper parámetros k más convenientes. Tanto K-means como DBScan fueron posteriormente descartados ya que se notó que empeoraban los resultados.
+
+Una posible interpretación de estos features es que estos algoritmos de clustering lograron identificar distintos grupos o sectores entre los visitantes al sitio, que ayudan a determinar si es probable o no que compren.
+
+Features agregados:
+\begin{itemize}
+	\item k-means++, k=2
+	\item k-means++, k=3
+	\item k-means++, k=4
+	\item k-means++, k=5
+	\item k-means++, k=50
+	\item k-means++, k=100
+	\item HDBScan, k=100
+\end{itemize}
+
 
 \newpage
-\section{Clasificadores}
+\section{Clasificadores utilizados}
+
+En la ultima entrega se utilizó un Voting Classifier de cuatro algoritmos:
+
+\begin{itemize}
+	
+	\item XGBoost
+	
+	\item Random Forest 
+	
+	\item LightGBM
+	
+	\item CatBoost
+	
+\end{itemize}
+
+Sin embargo, esta elección provino de un arduo proceso de elecciones previas y combinaciones de algoritmos a ensamblar, a continuación listamos algunos de los algoritmos utilizados y la motivación para ir reemplazando las diferentes combinaciones por otras.
+
+
 
 \newpage
 \section{Tuning}
 
-Grid Search y Random Search en KNN
-
-En los diferentes algoritmos vamos a llamar parámetros a aquellos valores que el algo-
-ritmo encuentra a partir de los datos y vamos a llamar hiper-parámetros a
+En los diferentes algoritmos vamos a llamar parámetros a aquellos valores que el algoritmo encuentra a partir de los datos y vamos a llamar hiper-parámetros a
 aquellos datos que el algoritmo necesita para poder funcionar.
 
 Llamaremos óptimos a los hiper-parámetros que logren para un set de Datos maximizar determinada métrica, en este caso, utilizamos la métrica ROC AUC.\
