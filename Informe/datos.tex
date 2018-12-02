@@ -66,7 +66,7 @@ Para conocer más de su modelo de negocio, pueden visitar el siguiente artículo
 
 	\item Se realizó Clustering mediante la funcion "KMeans" de la librería \textbf{sklearn}.
 	
-	\item Los siguientes clasificadores fueron importados: 	"xgboost", "lightgbm", "RandomForestClassifier", "CatBoostClassifier".
+	\item Para la entrega final, los siguientes clasificadores fueron importados: 	"xgboost", "lightgbm", "RandomForestClassifier", "CatBoostClassifier".
 	
 	\item Se utilizo como ensamble de clasificadores a "VotingClassifier".
 	
@@ -81,13 +81,12 @@ Link: \url{https://github.com/emabrea/7506-DATOS-TP2.git}
 \newpage
 \section{Breve análisis del set de Datos}
 \subsection{Balance del set de datos}
-Al haber muchas más visitas al sitio que compras de productos, el set de datos resulta ser muy desproporcionado, encontrándose muchas mas labels con 0 (no compra) que 1 (compra). Esto es un gran problema para los algoritmos de machine learning.
+Al haber muchas más visitas al sitio que compras de productos, el set de datos resulta ser muy desproporcionado, encontrándose muchas mas labels (95\%) con 0 (no compra) que 1 (compra). Esto es un gran problema para ciertos algoritmos de machine learning, que fallan con set de datos desbalanceados. 
 
-Las soluciones a este problema son acotadas, ya que se dispone de un set de datos chico. Con la librería \textbf{imbalanced-learn} probamos distintas soluciones con oversampling, undersampling o combinaciones de ambos, pero no resultaron.
+Las soluciones a este problema son acotadas, ya que se dispone de un set de datos chico. Con la librería \textbf{imbalanced-learn} probamos distintas soluciones con oversampling, undersampling o combinaciones de ambos, pero no resultaron. 
+Esto era lo esperado, ya que hacer oversampling significaría inventar la actividad de clientes, mientras que haciendo undersampling quedan muy pocos datos.
 
-Esto era lo esperado, ya que hacer oversampling significaría inventar la actividad de clientes, mientras que haciendo undersampling quedan demasiados pocos datos.
-
-El problema se solucionó utilizando los parametros de los algoritmos de clasificación que permiten darle distinto peso a cada label.
+El problema se solucionó utilizando los parametros de los algoritmos de clasificación que permiten darle distinto peso a cada label. En particular, encontramos que la mejor relacion de pesos era de 1:7.
 
 
 
@@ -115,14 +114,18 @@ no escala muy bien. En primer lugar es necesario construir en memoria un
 diccionario por cada feature en donde asociaremos un número a cada posible
 valor de cada columna, este diccionario puede ser demasiado grande. Otro
 problema serio es que si una columna puede tomar muchos valores diferentes
-posibles, por ejemplo la columna \textbf{model}, con  entonces necesitamos cientos de nuevas columnas para representar los datos, esto hacía que ciertas a ciertas columnas ni siquiera se le intente aplicar dicho método ya que no es viable.
+posibles, por ejemplo la columna \textbf{model}, con $208$ representantes diferentes, entonces necesitamos cientos de nuevas columnas para representar los datos, esto hacía que ciertas a ciertas columnas ni siquiera se le intente aplicar dicho método ya que no es viable.
 
 
 \subsubsection{Mean Encoding}
 Esta codificación consiste en reemplazar las categorías con el
 promedio de los valores a predecir en la categoría. Esto implica que por cada categoría, se calcula el promedio entre las postulaciones y no postulaciones y se
-reemplaza la categoría por ese promedio.
+reemplaza la categoría por ese promedio. Esto se utilizo con los precios de los modelos, aplicandole el precio promedio a dichos eventos sin modelos (NaN).
 
+\subsection{Featuring Engineering primera entrega (2º puesto)}
+
+\subsubsection{Primeros features}
+Para el primer submit, se utilizaron unos 15 features, en su mayoria referidos al tiempo, como cantidad de visitas/ checkouts/ compras en los últimos X días. Con este sencillo enfoque, se obtuvo un puntaje de 0.85289 . Para las siguientes entregas, se uso el 100\% del set de datos, con más features, y mejores hiper-parametros. 
 
 \subsection{Featuring Engineering segunda entrega (Train 100\%)}
 
@@ -451,7 +454,10 @@ En uno de nuestros primeros ensambles (constituídos por un Random Forest y un X
 \underline{Para XGBoost: }
 
 \begin{itemize}
-	\item Peso de
+	\item scale pos weight (tipicamente: entre 3 y 9).
+	\item learning rate (tipicamente: 0.001, 0.01, 0.05, 0.1)
+	\item max depth (entre 1 y 6)
+	\item n estimators (tipicamente: 500, 1000, 1500, 3000, 5000)
 \end{itemize}
 
 
@@ -460,9 +466,11 @@ En uno de nuestros primeros ensambles (constituídos por un Random Forest y un X
 
 \begin{itemize}
 	
-	\item Peso de una de las clase 1 : La lista de este hiperparametro contenía los números del 1 al 10
+	\item Peso de una de las clase 1 : La lista de este hiperparametro contenía los números del 3 al 10
 	
 	\item Criterio: Este hiper-parámetro podía ser : \{'gini', 'entropy'\}
+	
+	Y en general, para los demás algoritmos, también se probaron los mismos hiper-parametros que xgboost, como cantidad de árboles, profundidad, gamma, etc. 
 
 \end{itemize}
 
@@ -570,19 +578,66 @@ Cada mes más usuarios compraron a partir de una campaña, pero como se vió en 
 	
 	\bibitem{}	Matplotlib: Python plotting — Matplotlib 3.0.0 documentation,
 	\url{matplotlib.org}.
-	
-	
-	\bibitem{}seaborn: statistical data visualization — seaborn 0.9.0 documentation,
-	\url{seaborn.pydata.org}
-	
-	\bibitem{} Folium information,
-	
-	\url{https://github.com/python-visualization/folium}
-	
-	\bibitem{} GeoPy’s documentation,
+
+
+	\bibitem{} XGBoost documentation,
+
+	\url{
+	https://xgboost.readthedocs.io/en/latest/parameter.html}
+
+	\bibitem{} Random Forest documentation,
+
+	\url{
+	https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}
+
+	\bibitem{} Light GBM documentation,
+
+	\url{
+	https://github.com/Microsoft/LightGBM/blob/master/docs/Parameters.rst}
+
+	\bibitem{} CatBoost documentation,
 	
 	\url{
-	https://geopy.readthedocs.io/en/stable/}
+	https://github.com/catboost/catboost}
+
+	\bibitem{} Voting Classifier documentation,
+
+	\url{
+	http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html#sklearn.ensemble.VotingClassifier}
+	
+	\bibitem{} HDBScan documentation,
+	
+	\url{
+		https://hdbscan.readthedocs.io/en/latest/how\_hdbscan\_works.html}
+
+	\bibitem{} Select K best features documentation,
+	
+	\url{
+		https://scikit-learn.org/stable/modules/generated/sklearn.feature\_selection.SelectKBest.html}
+	
+	\bibitem{} KNN documentation,
+	
+	\url{
+		https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}
+	
+	\bibitem{} Decision tree documentation,
+	
+	\url{
+			http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html}
+	
+
+	
+	
+
+
+
+
+
+
+
+	
+
+	
 \end{thebibliography}
 
 
