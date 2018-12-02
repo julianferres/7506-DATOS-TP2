@@ -36,4 +36,3 @@
 \contentsline {subsection}{\numberline {7.1}Combinando Algoritmos Diferentes}{16}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Majority Voting}{16}{subsubsection.7.1.1}
 \contentsline {subsubsection}{\numberline {7.1.2}Averaging}{16}{subsubsection.7.1.2}
-\contentsline {section}{\numberline {8}Conclusiones generales}{18}{section.8}
