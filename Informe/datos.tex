@@ -17,6 +17,8 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
+	
+	
 \tableofcontents % Índice general
 \newpage
 
@@ -97,20 +99,131 @@ En la competencia, los valores altos se mantuvieron entre 0.85 y 0.88. Creemos q
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{roc_auc}
+	\includegraphics[width=1.1\textwidth, height=0.75\textheight]{roc_auc}
 	\caption{\label{fig:01} Métrica usada }
 \end{figure}
 
+\begin{center}
+	
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{roc_propia}
+	\includegraphics[width=1.1\textwidth , height=0.75\textheight]{roc_propia}
 	\caption{\label{fig:02} Curva obtenida }
 \end{figure}
 
+\end{center}
+
+\newpage
+\subsection{Características interesantes a la hora de armar features}
+
+Destacamos algunas características que pudimos extraer en un análisis previo mediante los siguientes gráficos:
+
+\newpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth ,  height=0.95\textheight ]{compras_prev_a_compras}
+\caption{Compras previas de los compradores de Junio}
+\label{fig:compras_prev_a_compras}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth ,  height=0.95\textheight]{ult_vis_prev_com}
+\caption{Ultima visita de compradores de Junio}
+\label{fig:ult_vis_prev_com}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth ,  height=0.95\textheight]{ult_vis_prev_no_compra}
+\caption{Ultima visita de no-compradores de Junio}
+\label{fig:ult_vis_prev_no_compra}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth ,  height=0.95\textheight]{visitas_prev_compras}
+\caption{Visitas previas de los compradores}
+\label{fig:visitas_prev_compras}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth ,  height=0.95\textheight ]{visitas_prev_no_compras}
+\caption{Visitas previas de los no compradores}
+\label{fig:visitas_prev_no_compras}
+\end{figure}
 
 
 \newpage
 \section{Featuring Engineering}
+
+En esta sección hablaremos del aspecto más importante de nuestro algoritmo de Machine learning. Los features son determinantes a la hora de desarrollar un modelo predictivo. 
+
+En nuestro modelo, como en la gran mayoría de los problemas de machine learning, la cantidad de features con la que contamos es simplemente mínima en comparación con los features que podemos crear a partir de los datos.
+Para este problema en particular antes de pensar en la creación de fea-
+tures tenemos que planificar cuál será nuestra estrategia para poder realizar las
+predicciones que se nos piden y de qué forma vamos a entrenar nuestro modelo.
+
+\subsection{Pensando en el modelo}
+
+Para pensar en nuestro modelo debemos recordar que el objetivo es determinar para cada usuario presentado, cuál es la probabilidad de que ese usuario realice una conversión en Trocafone en un periodo determinado.
+
+Es decir que nuestro modelo va a tener que procesar una serie de features que
+dependen de columnas en un DataFrame de eventos hasta el 01/06/2018, este contenía principalmente variables categoricas y muchas columnas anuladas completamente.
+
+Se listan a continuación: \\
+
+
+\textbf{\underline{Columnas con valores no Nulos:}}
+
+\begin{itemize}
+	
+	
+	\item timestamp
+	\item event 
+	\item person 
+	\item url 
+	\item sku  
+	\item model 
+	\item condition 
+	\item storage
+	\item color 
+
+	
+\end{itemize}
+
+\textbf{\underline{Columnas completamente de valores Nulos:}}
+
+\begin{itemize}
+	
+		\item skus
+		\item search term
+		\item staticpage
+		\item campaign source
+		\item search engine
+		\item hannel
+		\item new vs returning
+		\item city
+		\item region
+		\item country
+		\item device type
+		\item screen resolution
+		\item operating system version
+		\item browser version
+		
+\end{itemize}
+
+
+Para validar el modelo podemos usar los datos provistos en un archivo .csv que contiene información de ciertos usuarios y si realizó una conversion en el periodo de tiempo el 01/06/2018 - 15/06/2018. \\
+
+La construcción de features es un proceso creativo y la forma de validar si un
+feature sirve o no es probando el modelo con nuestro set de validación, algunos
+features pueden ser muy útiles, otros no tanto. \\
+
+También se decidió agregar un archivo extra con recopilaciones propias de los precios de los moviles más visitados en el período del set de datos que se nos facilitó.
+
 
 \subsection{Encoding}
 
@@ -143,6 +256,10 @@ promedio de los valores a predecir en la categoría. Esto implica que por cada c
 reemplaza la categoría por ese promedio. Esto se utilizo con los precios de los modelos, aplicandole el precio promedio a dichos eventos sin modelos (NaN).
 
 \subsection{Featuring Engineering primera entrega (2º puesto)}
+
+Llamamos entrega a un conjunto de mejoras que nos permitió no solo mejorar el score en Kaggle, sino incorporar varias mejoras en simultaneo.
+
+Por la cantidad de submits realizados, decidimos en ocasiones agrupar varios submits con progresos bajo el nombre de una entrega.
 
 \subsubsection{Primeros features}
 Para el primer submit, se utilizaron unos 15 features, en su mayoria referidos al tiempo, como cantidad de visitas/ checkouts/ compras en los últimos X días. Con este sencillo enfoque, se obtuvo un puntaje de 0.85289 . Para las siguientes entregas, se uso el 100\% del set de datos, con más features, y mejores hiper-parametros. 
@@ -227,10 +344,16 @@ Para el primer submit, se utilizaron unos 15 features, en su mayoria referidos a
 
 \subsection{Featuring Engineering tercera entrega}
 
-	Mejores hiper parametros
+	Para esta entrega se decidió llevar a cabo el tuning del algoritmo (Sección 6).
+	
+	Para esto se realizó en primer lugar un Random-Search, con el fin de estimar los hiper-parametros óptimos o un intervalo al que pertenecía cada uno.
+	
+	Esto facilitó la posterior exhaustiva con Grid-Search, ya que pudimos reducir los intervalos de busqueda de la misma, y concentrarnos en obtener mejor precisión en los mismos.
 
 \subsection{Featuring Engineering cuarta entrega}
 
+	En esta ocasión surgió la necesidad del agregado de nuevos features, debido a que la elección de los algoritmos a ensamblar y sus hiperparametros tenía un impacto mucho menor que estos a la hora de mejorar el score.
+	
 \subsection{Cantidad de valores diferentes por característica}
 
 \begin{itemize}
@@ -586,18 +709,142 @@ Una solución para esto es convertir cada probabilidad de un rango entre 1 y n, 
 el segundo 2, etc, y el de menor probabilidad, n, sin importar el valor de las probabilidades. Si hacemos esto para todos los clasificadores podemos luego
 promediar los rangos y convertir estos promedios en un número entre 0 y 1 para la probabilidad final.
 
+\newpage
+\subsection{Aplicación a nuestro algoritmo}
+
+Luego de 15 días de pruebas cuasi-continuas con algoritmos "individuales", se decidió emprender el camino de un ensamble, que pudiera extraer la expresividad particular de los mejores (según score en Kaggle) algoritmos  algoritmo utilizado hasta el momento.
+
+Esto nos llevó a multiples combinaciones y elecciones de los algoritmos a ensamblar y el ensamblador, en donde emergió la función \textbf{ VotingClassifier} de la librería \textbf{sklearn.ensemble} como principal candidato a ensamblador.
+
+
+\subsubsection{VotingClassifier}
+
+La idea detras de VotingClassifier es la de combinar conceptualmente diferentes clasificadores de Machine Learning y usar \textit{mayoría simple} o un \textit{promedio suave} (soft vote) de las probabilidades predecidas por cada metodo para realizar la predicción de probabilidad. Un clasificador de este estilo pretende balancear los diferentes algoritmos de tal manera de minimizar los puntos debiles de cada uno.
+
+
+\subsubsection{Elección final}
+
+En un primer momento se realizaron diversas corridas de prueba en las que el promedio suave predominaba notablemente ante la mayoría simple, por lo que se decidió de ahi en adelante, usar la versión \textit{soft} de nuestro algoritmo.
+
+Para las elección de los algoritmos, notamos que necesitabamos algoritmos que se destaquen en aspectos diferentes, y luego de una exhaustiva busqueda se decidió utilizar los siguientes:
+
+\begin{itemize}
+	\item XGBoost
+	
+	\item Light GBM
+	
+	\item Random Forest
+	
+	\item CatBoost
+
+\end{itemize}
+
+Estos algoritmos en conjunto lograron mas riqueza en la expresividad, y permitieron alcanzar scores más gratificantes que los obtenidos individualmente.
 
 \newpage
 
-<<<<<<< HEAD
 \section{Últimas entregas}
+	
+	Cabe aclarar que los features y comentarios se realizaron hasta la 10ma entrega, que arrojó nuestro máximo
+	
+	
+	En las últimas entregas se buscó enriquecer el modelo en terminos de features, constatando caso por caso que nuestro ensamble era quien mejores resultados arrojaba.\\
+	
+	Cabe destacar que la mayoría de los features están relacionados a aspectos temporales.\\
+	
+	Con esto se llegó a aproximadamente un conjunto de 80 features, y se muestran a continuación el feature importance de algunos features para algunos algoritmos.
+	
+	Se listan a continuación algunos de los features agregados en las últimas entregas:
+	
+	\begin{itemize}
+		\item checkouts ultimos 16
+		\item checkouts ultimos 17
+		\item checkouts ultimos 18
+		\item checkouts ultimos 19
+		
+		$\cdots$
+	
+	\end{itemize}
+	
+	y así con diferentes días, sorprendiendonos que en el feature importance de XGBoost se destacaba \textit{ checkouts ultimos 16} como el de mayor importancia.
+	
+	
+	\begin{figure}
+\centering
+\includegraphics[width=\linewidth , height=0.9\textheight]{feature-XGB}
+\caption{Feature importance XGBoost}
+\label{fig:feature-XGB}
+\end{figure}
 
-69 labels
+
+Se muestra a continuación un gráfico del feature importance de Random Forest, que numera los features con la aparición en el DataFrame:
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth,  height=0.9\textheight]{feature-RF}
+\caption{Feature Importance de Random Forest}
+\label{fig:feature-RF}
+\end{figure}
+	
+Tambien se buscó relacionar el día de la semana con la cantidad de un evento de tal tipo, dando origen a features del estilo:
+
+	\begin{itemize}
+		\item 	checkouts viernes
+		
+		\item compras jueves
+		
+		$\cdots$
+	\end{itemize}	
+
+	
+	
+	Tambien decidimos mencionar que hubo intentos descartados de poder fabricar features con diversos eventos, como por ejemplo \textit{Brand Listing y Search Product}, que quedaron en codigo Markdown como evidencia que se intentó proceder con ellos en algún momento
+	
+\newpage
+
+\section{Tiempos de ejecución}
+
+	Los tiempos de ejecución de nuestros algoritmos no nos representaron un problema a lo largo de la inspección de nuevos features y clasificadores. Estos nunca fueron superiores a los veinte minutos.\\
+	
+	Como comentario, el algoritmo completo tarda poco menos de 20 minutos en completar su ejecución (incluyendo entrenamiento).
+	
+	
+	\subsection{Tiempos de ejecución de Tuning}
+	
+	Cabe destacar que en el Tuning se registraron tiempos extremadamente altos (en particular en el Grid-Search) pero siempre controlados previamente por los alumnos mediante estimaciones.\\
+	
+	\subsubsection{Random Search}
+	
+	Se ejecutó reiteradas veces el algoritmo de Random-Search, controlando su cantidad de ejecuciones de manera de tardar a lo sumo 2 horas, esto nos permitió reducir el scope de busqueda mediante Grid Search, con el fin de obtener resultados más precisos.\\
+	
+	\subsubsection{Grid Search}
+	
+	Se ejecutó en dos ocasiones (relevantes) el algoritmo de Grid Search, con un promedio de ejecución de 14 horas cada uno, con el fín de obtener los hiperparametros con la máxima exactitud posible.
 
 \newpage
-=======
->>>>>>> 09391ec2e6df3e0308cf2cfec2d9b6c5e2c4d9c3
 
+\section{Conclusiones Generales}
+
+Luego de todo el trabajo realizado, y teniendo en consideración aquellos intentos con algoritmos y features no incluidos en este informe, nos pareció importante destacar las siguientes conclusiones:
+
+
+	\begin{itemize}
+		
+		\item La busqueda de features es una tarea creativa, pero a su vez ardua, ya que depende de cada problema en particular y como estén dispuestos los datos en el mismo.
+		
+		\item Si es posible tener alguna métrica para algún algoritmo, será importante reforzar o agregar features similares a los que el algoritmo considera como más usados.
+		
+		\item Pese a que agregar features en general ayuda, muchas veces es necesario tambien filtrar features que no son tan utilizados, con el fín de resaltar los demás.
+		
+		\item Ante columnas con variables categóricas, es crucial realizar encodings correspondientes, ya que las mismas aportan información útil en la mayoría de los casos ( en nuestro problema, la gran mayoría de columnas eran de este estilo).
+		
+		\item Combinar algorimos con expresividades variadas dentro de un ensamblador que permita maximizar las fortalezas de cada uno, y disminuir las debilidades.
+		
+		
+		
+	\end{itemize}
+	
+\newpage
 
 
 \begin{thebibliography}{99}

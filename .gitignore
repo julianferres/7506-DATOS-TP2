@@ -1,3 +1,7 @@
 #Ignoro el data para no subir los csv
 
 data
+datos.aux
+datos.log
+datos.toc
+datos.synctex.gz

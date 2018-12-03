@@ -5,70 +5,46 @@
 \contentsline {subsection}{\numberline {1.4}Repositorio de Github}{4}{subsection.1.4}
 \contentsline {section}{\numberline {2}Breve an\IeC {\'a}lisis del set de Datos}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Balance del set de datos}{5}{subsection.2.1}
-<<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.2}M\IeC {\'e}trica usada}{5}{subsection.2.2}
-\contentsline {section}{\numberline {3}Featuring Engineering}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}Encoding}{8}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Count Encoding}{8}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}One Hot Encoding}{8}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Mean Encoding}{8}{subsubsection.3.1.3}
-\contentsline {subsection}{\numberline {3.2}Featuring Engineering primera entrega (2\IeC {\textordmasculine } puesto)}{9}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Primeros features}{9}{subsubsection.3.2.1}
-\contentsline {subsection}{\numberline {3.3}Featuring Engineering segunda entrega (Train 100\%)}{9}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1} Features sobre acciones por rango de tiempo }{9}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Acciones en el \IeC {\'u}ltimo mes}{9}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Acciones en los \IeC {\'u}ltimos 15 d\IeC {\'\i }as}{9}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Acciones en la \IeC {\'u}ltima semana}{9}{subsubsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.5}Acciones en los \IeC {\'u}ltimos 3 d\IeC {\'\i }as}{9}{subsubsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.6}Features de acciones del usuario}{10}{subsubsection.3.3.6}
-\contentsline {subsubsection}{\numberline {3.3.7}Features de modelos}{10}{subsubsection.3.3.7}
-\contentsline {subsection}{\numberline {3.4}Featuring Engineering tercera entrega}{10}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Featuring Engineering cuarta entrega}{10}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Cantidad de valores diferentes por caracter\IeC {\'\i }stica}{10}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Featuring Engineering quinta entrega}{11}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Featuring Engineering sexta entrega}{13}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}Featuring Engineering septima entrega}{13}{subsection.3.9}
-\contentsline {section}{\numberline {4}Algoritmos de Clustering}{14}{section.4}
-\contentsline {section}{\numberline {5}Clasificadores utilizados}{15}{section.5}
-\contentsline {section}{\numberline {6}Tuning}{17}{section.6}
-\contentsline {subsection}{\numberline {6.1}Grid-Search}{17}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Random-Search}{17}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Aplicaci\IeC {\'o}n a nuestro algoritmo}{18}{subsection.6.3}
-\contentsline {section}{\numberline {7}Ensamble}{19}{section.7}
-\contentsline {subsection}{\numberline {7.1}Combinando Algoritmos Diferentes}{19}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Majority Voting}{19}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Averaging}{19}{subsubsection.7.1.2}
-\contentsline {section}{\numberline {8}\IeC {\'U}ltimas entregas}{21}{section.8}
-=======
-\contentsline {section}{\numberline {3}Featuring Engineering}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}Encoding}{6}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Count Encoding}{6}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}One Hot Encoding}{6}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Mean Encoding}{6}{subsubsection.3.1.3}
-\contentsline {subsection}{\numberline {3.2}Featuring Engineering primera entrega (2\IeC {\textordmasculine } puesto)}{6}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Primeros features}{6}{subsubsection.3.2.1}
-\contentsline {subsection}{\numberline {3.3}Featuring Engineering segunda entrega (Train 100\%)}{7}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1} Features sobre acciones por rango de tiempo }{7}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Acciones en el \IeC {\'u}ltimo mes}{7}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Acciones en los \IeC {\'u}ltimos 15 d\IeC {\'\i }as}{7}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Acciones en la \IeC {\'u}ltima semana}{7}{subsubsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.5}Acciones en los \IeC {\'u}ltimos 3 d\IeC {\'\i }as}{7}{subsubsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.6}Features de acciones del usuario}{7}{subsubsection.3.3.6}
-\contentsline {subsubsection}{\numberline {3.3.7}Features de modelos}{8}{subsubsection.3.3.7}
-\contentsline {subsection}{\numberline {3.4}Featuring Engineering tercera entrega}{8}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Featuring Engineering cuarta entrega}{8}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Cantidad de valores diferentes por caracter\IeC {\'\i }stica}{8}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Featuring Engineering quinta entrega}{9}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Featuring Engineering sexta entrega}{11}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}Featuring Engineering septima entrega}{11}{subsection.3.9}
-\contentsline {section}{\numberline {4}Algoritmos de Clustering}{12}{section.4}
-\contentsline {section}{\numberline {5}Clasificadores utilizados}{13}{section.5}
-\contentsline {section}{\numberline {6}Tuning}{14}{section.6}
-\contentsline {subsection}{\numberline {6.1}Grid-Search}{14}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Random-Search}{14}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Aplicaci\IeC {\'o}n a nuestro algoritmo}{15}{subsection.6.3}
-\contentsline {section}{\numberline {7}Ensamble}{16}{section.7}
-\contentsline {subsection}{\numberline {7.1}Combinando Algoritmos Diferentes}{16}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Majority Voting}{16}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Averaging}{16}{subsubsection.7.1.2}
->>>>>>> 09391ec2e6df3e0308cf2cfec2d9b6c5e2c4d9c3
+\contentsline {subsection}{\numberline {2.3}Caracter\IeC {\'\i }sticas interesantes a la hora de armar features}{8}{subsection.2.3}
+\contentsline {section}{\numberline {3}Featuring Engineering}{14}{section.3}
+\contentsline {subsection}{\numberline {3.1}Pensando en el modelo}{14}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Encoding}{16}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Count Encoding}{16}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}One Hot Encoding}{16}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Mean Encoding}{16}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Featuring Engineering primera entrega (2\IeC {\textordmasculine } puesto)}{17}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Primeros features}{17}{subsubsection.3.3.1}
+\contentsline {subsection}{\numberline {3.4}Featuring Engineering segunda entrega (Train 100\%)}{17}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1} Features sobre acciones por rango de tiempo }{17}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Acciones en el \IeC {\'u}ltimo mes}{17}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Acciones en los \IeC {\'u}ltimos 15 d\IeC {\'\i }as}{17}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.4}Acciones en la \IeC {\'u}ltima semana}{17}{subsubsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.5}Acciones en los \IeC {\'u}ltimos 3 d\IeC {\'\i }as}{17}{subsubsection.3.4.5}
+\contentsline {subsubsection}{\numberline {3.4.6}Features de acciones del usuario}{18}{subsubsection.3.4.6}
+\contentsline {subsubsection}{\numberline {3.4.7}Features de modelos}{18}{subsubsection.3.4.7}
+\contentsline {subsection}{\numberline {3.5}Featuring Engineering tercera entrega}{18}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Featuring Engineering cuarta entrega}{18}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Cantidad de valores diferentes por caracter\IeC {\'\i }stica}{18}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Featuring Engineering quinta entrega}{20}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}Featuring Engineering sexta entrega}{22}{subsection.3.9}
+\contentsline {subsection}{\numberline {3.10}Featuring Engineering septima entrega}{22}{subsection.3.10}
+\contentsline {section}{\numberline {4}Algoritmos de Clustering}{23}{section.4}
+\contentsline {section}{\numberline {5}Clasificadores utilizados}{24}{section.5}
+\contentsline {section}{\numberline {6}Tuning}{26}{section.6}
+\contentsline {subsection}{\numberline {6.1}Grid-Search}{26}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Random-Search}{26}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Aplicaci\IeC {\'o}n a nuestro algoritmo}{27}{subsection.6.3}
+\contentsline {section}{\numberline {7}Ensamble}{28}{section.7}
+\contentsline {subsection}{\numberline {7.1}Combinando Algoritmos Diferentes}{28}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Majority Voting}{28}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Averaging}{28}{subsubsection.7.1.2}
+\contentsline {subsection}{\numberline {7.2}Aplicaci\IeC {\'o}n a nuestro algoritmo}{30}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}VotingClassifier}{30}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Elecci\IeC {\'o}n final}{30}{subsubsection.7.2.2}
+\contentsline {section}{\numberline {8}\IeC {\'U}ltimas entregas}{31}{section.8}
+\contentsline {section}{\numberline {9}Tiempos de ejecuci\IeC {\'o}n}{34}{section.9}
+\contentsline {subsection}{\numberline {9.1}Tiempos de ejecuci\IeC {\'o}n de Tuning}{34}{subsection.9.1}
+\contentsline {subsubsection}{\numberline {9.1.1}Random Search}{34}{subsubsection.9.1.1}
+\contentsline {subsubsection}{\numberline {9.1.2}Grid Search}{34}{subsubsection.9.1.2}
+\contentsline {section}{\numberline {10}Conclusiones Generales}{35}{section.10}
