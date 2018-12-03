@@ -88,6 +88,25 @@ Esto era lo esperado, ya que hacer oversampling significaría inventar la activi
 
 El problema se solucionó utilizando los parametros de los algoritmos de clasificación que permiten darle distinto peso a cada label. En particular, encontramos que la mejor relacion de pesos era de 1:7.
 
+\subsection{Métrica usada}
+
+Al tener el set de datos con 95\% de una clase, no se puede usar como métrica la precision, pues un algoritmo que solo arroje labels de esa clase, tendría un 95\% de precisión, a pesar de no predecir nada. Es por esto que se decidió utilizar otra métrica. En este caso, se utilizo el ROC AUC SCORE (Area Under Receiver Operating Characteristic Curve). En dicha métrica, se toman en cuenta los falsos positivos y negativos, y los verdaderos positivos y negativos. Con un random guess, se obtendría un 0.5, y con un puntaje perfecto, un 1.0. 
+En la competencia, los valores altos se mantuvieron entre 0.85 y 0.88. Creemos que por la naturaleza del problema, sería muy difícil superar esa cota, pues puede haber dos usuarios con los mismos eventos, y uno compró y el otro no. 
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{roc_auc}
+	\caption{\label{fig:01} Métrica usada }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{roc_propia}
+	\caption{\label{fig:02} Curva obtenida }
+\end{figure}
+
 
 
 \newpage
@@ -98,8 +117,9 @@ El problema se solucionó utilizando los parametros de los algoritmos de clasifi
 El dataset contenía varias variables categóricas, las cuales no son aceptadas por
 múltiples algoritmos de clasificación como por ejemplo XGBoost.
 
-Para poder utilizar las mismas, se procedió a codificarlas con los siguientes tipos de
-codificación:
+Otro problema es que a cada usuario se le debe asignar una sola muestra (fila), por lo tanto, surge el problema de que seleccionar luego de hacer el encoding. Por ejemplo, se puede codificar el almacenamiento de los modelos vistos, pero luego hay que asignarle uno solo a cada usuario. Es por esto que para este problema, encoding no fue muy útil.
+
+Para poder utilizar las variables categóricas, se utilizaron los siguientes algoritmos:
 
 \subsubsection{Count Encoding}
 Consiste en reemplazar las categorías por la cantidad de
@@ -334,6 +354,8 @@ De la lista de precios de moviles se pudo extraer algunas características para 
 	\item Media de los precios
 \end{itemize}
 
+Con esta información, se pudo mejorar levemente el score, pero debido a la gran cantidad de NaN en la columna "Model", la mejora no fue la esperada.
+
 \subsection{Featuring Engineering sexta entrega}
 
 Se pudo observar en Select K-Best y en los feature importance de cada algoritmo que los features relacionados a Visitas, Checkouts y Conversion tenían un papel relevante a la hora de realizar predicciones, es por eso que se decidió intensificar la cantidad de features en dichas areas. Esto dió como resultado la inclusión de los siguientes:
@@ -356,6 +378,8 @@ Se pudo observar en Select K-Best y en los feature importance de cada algoritmo 
 	
 \end{itemize}
 
+Sin embargo, para los submits finales, se usaron todos los features, pues observamos que aunque un feature no parezca importante para un algoritmo, eso no implica que quitandolo se mejore el resultado. 
+
 
 
 \subsection{Featuring Engineering septima entrega}
@@ -376,6 +400,8 @@ Se pudo observar en Select K-Best y en los feature importance de cada algoritmo 
 	
 \end{itemize}
 
+Es decir, se profundizo en características temporales, y haciendo varias segregaciones, se logró mejorar considerablemente el modelo, superando los 0.86. También se observo que el tipo de evento más "importante" para los algoritmos resulto ser el "checkout".
+ 
 \section{Algoritmos de Clustering}
 
 Luego de la clase sobre clustering, propusimos agregar como features los resultados de aplicar distintos algoritmos de clustering al set de datos. Se probó con K-means, K-means++, DBScan y HDBScan. Por prueba y error se fueron determinando los hiper parámetros k más convenientes. Tanto K-means como DBScan fueron posteriormente descartados ya que se notó que empeoraban los resultados.
@@ -412,6 +438,42 @@ En la ultima entrega se utilizó un Voting Classifier de cuatro algoritmos:
 \end{itemize}
 
 Sin embargo, esta elección provino de un arduo proceso de elecciones previas y combinaciones de algoritmos a ensamblar, a continuación listamos algunos de los algoritmos utilizados y la motivación para ir reemplazando las diferentes combinaciones por otras.
+
+\begin{itemize}
+	
+	\item KNN
+	
+	Fue el primer algoritmo utilizado por su sencillez, pero no se pudo obtener más de 0.79 de score (local). Un problema es no poder indicarle el peso de las clases.
+	
+	\item Decision tree
+	
+	Primer algoritmo basado en arboles utilizado, pero debido a la naturaleza del problema (predicción de compras), no obtuvo buenos resultados. 
+	
+	\item Logistic regression
+	
+	A pesar de que es posible indicarle el peso de las clases, este algoritmo fallaba en encontrar los labels positivos. Se probaron varios valores de C, y del solver (newton-cg’, ‘lbfgs’, ‘liblinear’, ‘sag’, ‘saga’), pero no se pudo superar los 0.80.	
+	
+	\item SVM
+	
+	SVM acertaba muchos labels 0, pero muy pocos 1, por lo cual tenía muy buena precisión, pero un ROC AUC Score muy bajo. Se probaron varios kernel con distintos C, pero no resultó.
+	
+	\item Neural network 
+	
+	A este algoritmo se le dedicó mucho tiempo, con la esperanza de superar el puntaje obtenido. Para ello se normalizo (con varios métodos) todo el dataframe, y se trabajó con datos numéricos. 
+	Se probaron diversos solvers (‘lbfgs’, ‘sgd’, ‘adam’), obteniendo mejores resultados con lbfgs. 
+	Para la funcion de activación, se probaron: ‘identity’, ‘logistic’, ‘tanh’, ‘relu’, resultando mejor la funcion "relu".
+	Luego, se probaron diversos valores de alpha, y de learning rate, como también varias capas (layers), entre 2 y 4. Esto aumento el tiempo del algoritmo, cuyo mejor resultado fue 0.8468. 
+	Al hacer un ensamblador con otro algoritmo del tipo XGBoost, se obtuvieron buenos resultados, pero finalmente se decidió no incluirlo en la entrega final, entre otros motivos, por el tiempo tomado para entrenar.
+	
+	\item AdaBoost
+	
+	Este algoritmo dio buenos resultados, pero resulto ser un poco inferior a XGBoost, por lo cual, decidimos no incluirlo en el resultado final
+	
+	Como dato adicional, también se probo el famoso algoritmos Naive Bayes, pero como era de esperarse, los resultados no fueron buenos. 
+	
+	
+	
+\end{itemize}
 
 
 
@@ -483,10 +545,9 @@ Es decir, de nuestro set de datos, el 10\% fue usado para validar los hiperparam
 \newpage
 \section{Ensamble}
 
-Los mejores algoritmos de ML suelen surgir de la combinación de varios algo-
+Los mejores resultados en ML suelen surgir de la combinación de varios algo-
 ritmos. Es muy raro que un solo algoritmo de ML logre mejores resultados que
-un ensamble. Esto pudo verse en las sucesivas entregas, donde utilizar un ensamble nos traía
-resultados mas satisfactorios que usar los algoritmos en soledad.
+un ensamble. Esto pudo verse en las sucesivas entregas, donde utilizar un ensamble nos traía resultados mas satisfactorios que usar los algoritmos individualmente.
 
 \subsection{Combinando Algoritmos Diferentes}
 
@@ -528,6 +589,14 @@ promediar los rangos y convertir estos promedios en un número entre 0 y 1 para 
 
 \newpage
 
+<<<<<<< HEAD
+\section{Últimas entregas}
+
+69 labels
+
+\newpage
+=======
+>>>>>>> 09391ec2e6df3e0308cf2cfec2d9b6c5e2c4d9c3
 
 
 
@@ -588,8 +657,23 @@ promediar los rangos y convertir estos promedios en un número entre 0 y 1 para 
 	
 	\url{
 			http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html}
+		
+	\bibitem{} Logistic regression documentation,
+		
+	\url{
+			https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LogisticRegression.html}
+		
+	\bibitem{} SVM documentation,
 	
-
+	\url{
+		https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html}
+	
+	\bibitem{} Neural network documentation,
+	
+	\url{
+		https://scikit-learn.org/stable/modules/generated/sklearn.neural\_network.MLPClassifier.html}
+	
+	
 	
 	
 
